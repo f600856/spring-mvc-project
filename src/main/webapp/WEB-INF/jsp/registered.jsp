@@ -6,13 +6,13 @@
 <title>Påmeldingsbekreftelse</title>
 </head>
 <body>
-	<h2>Påmeldingsbekreftelse</h2>
-	<p>Påmeldingen er mottatt for</p>
+	<h2>Enrollment confirmation</h2>
+	<p>The registration has been received for</p>
 	<p>
 		&nbsp;&nbsp;&nbsp;${user.firstName}<br>
 		&nbsp;&nbsp;&nbsp;${user.lastName}<br>
 		&nbsp;&nbsp;&nbsp;${user.mobile}<br> &nbsp;&nbsp;&nbsp;${user.gender}
 	</p>
-	<a href="http://localhost:8080/userlist">Gå til deltagerlisten</a>
+	<a href="http://localhost:8080/userlist">Go to the user list</a>
 
 </body></html>

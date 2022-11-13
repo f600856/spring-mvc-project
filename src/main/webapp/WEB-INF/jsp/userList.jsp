@@ -4,16 +4,16 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
 	<link rel="stylesheet" href="./simple.css">
-	<title>Deltagerliste</title>
+	<title>Participant list</title>
 </head>
 <body>
     <p>Innlogget som: ${currentUser.mobile} / ${currentUser.firstName} ${currentUser.lastName}</p>
-	<h2>Deltagerliste</h2>
+	<h2>Participant list</h2>
 	<table>
 		<tbody><tr>
-			<th>Kjønn</th>
-			<th align="left">Navn</th>
-			<th align="left">Mobil</th>
+			<th>Gender</th>
+			<th align="left">Name</th>
+			<th align="left">Mobile</th>
 		</tr>
 
 		<c:forEach var="u" items="${users}">
@@ -27,7 +27,7 @@
 	</tbody></table>
 	<br>
 	<form action="http://localhost:8080/logout" method="post">
-	   <button type="submit">Logg ut</button> 
+	   <button type="submit">Log out</button> 
 	</form>
 
 </body></html>

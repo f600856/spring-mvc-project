@@ -4,6 +4,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
+import com.registration.model.User;
+
 public class PasswordUtil {
 	public static String generateHash(String password, String salt) {
 
@@ -29,4 +31,9 @@ public class PasswordUtil {
         random.nextBytes(salt);
         return salt.toString();
     }
+    
+    public static boolean isCredentialsValid(String hash, String salt, String passwordInput) {
+		String hashForInput = PasswordUtil.generateHash(passwordInput, salt);
+		return hashForInput.equals(hash);
+	} 
 }

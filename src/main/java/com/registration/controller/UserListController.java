@@ -28,7 +28,7 @@ public class UserListController {
 		String mobile = (String) session.getAttribute("mobile");
 		User currentUser = userRepo.getReferenceById(mobile);
 		List<User> userList = userRepo.findAll();
-		System.out.println("userList length " + userList.size());
+		//System.out.println("userList length " + userList.size());
         session.setAttribute("users", userList);
         session.setAttribute("currentUser", currentUser);
         

@@ -7,12 +7,12 @@
 </head>
 <body>
     <div style="color: red">${redirectMessage}</div>
-	<h2>Logg inn</h2>
-	<p style="color:red;"></p>
+	<h2>Log in</h2>
+	<div style="color: red">${logoutMessage}</div>
 	<form action="login" method="post">
 		<fieldset>
-			<label for="mobile">Mobil:</label> <input type="text" name="mobile">
-			<label for="password">Passord:</label> <input type="password" name="password">
+			<label for="mobile">Mobile:</label> <input type="text" name="mobile">
+			<label for="password">Password:</label> <input type="password" name="password">
 			<br><br><button type="submit">Log in</button>
 		</fieldset>
 	</form>

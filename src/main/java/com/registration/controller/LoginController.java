@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.registration.model.User;
 import com.registration.repository.UserRepository;
 import com.registration.util.LoginUtil;
+import com.registration.util.PasswordUtil;
 
 
 @Controller
@@ -34,7 +35,7 @@ public class LoginController {
 		}
 		
 		User user = userRepo.getReferenceById(mobile);
-		if (!LoginUtil.isCredentialsValid(user, password)) {
+		if (!PasswordUtil.isCredentialsValid(user.getHash(), user.getSalt(), password)) {
 			ra.addFlashAttribute("redirectMessage", "Password invalid");
 			return "redirect:login";
 		}

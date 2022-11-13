@@ -7,13 +7,15 @@ public class InputValidator {
 		}
 		
 	    public static boolean isValidName(String name) {
-	        return InputValidator.isNotEmpty(name);        
+	    	if (!InputValidator.isNotEmpty(name)) return false;  
+	    	
+	    	return name.length() >= 2 && name.length() <= 20;
 	    }
 	    
 	    public static boolean isValidPassword(String pass, String repeat) {
-	        if (!InputValidator.isNotEmpty(pass)) {
-	        	return false;  
-	        }
+	        if (!InputValidator.isNotEmpty(pass)) return false; 
+	        
+	        if (pass.length() < 5) return false;
 	        
 	        return pass.equals(repeat);
 	    }
